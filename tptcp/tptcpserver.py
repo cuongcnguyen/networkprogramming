@@ -12,6 +12,8 @@ mysocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 mysocket.bind(("127.0.0.1", 37))
 mysocket.listen(5)
 (client, (ip,port))=mysocket.accept() 
+
+
 time=(epochtime).to_bytes(4, byteorder='big')
 
 client.send(time)
